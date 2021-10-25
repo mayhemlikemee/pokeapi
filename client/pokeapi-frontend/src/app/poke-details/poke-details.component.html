@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-sm"></div>
+
+  <div class="col-sm">
+
+    <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title>{{selectedDetails.name}}</mat-card-title>
+        <mat-card-subtitle>ID: {{pokeId}}</mat-card-subtitle>
+        <img mat-card-sm-image [src]="selectedDetails.img" >
+      </mat-card-title-group>
+      <mat-card-content>
+        <p><b>Weight:</b> {{selectedDetails.weight}}</p>
+        <div class="row">
+        <div class="col-sm">
+        <label>Moves:</label>
+        <ul *ngFor="let moves of selectedDetails.moves; let i = index">
+          <li>{{moves.move.name}}</li>
+        </ul>
+        </div>
+
+        <div class="col-sm">
+        <label>Generations:</label>
+        <ul *ngFor="let generation of selectedDetails.generation; let i = index">
+          <li>{{generation.version.name}}</li>
+        </ul>
+        </div>
+      </div>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+  <div class="col-sm"></div>
+</div>

@@ -1,0 +1,11 @@
+.card  {
+  text-align: center;
+}
+
+mat-card-title {
+  text-transform: capitalize;
+}
+
+label {
+  font-weight: bold;
+}
